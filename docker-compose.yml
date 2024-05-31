@@ -1,0 +1,6 @@
+﻿services:
+  musbooking:
+    image: musbooking
+    build:
+      context: .
+      dockerfile: MUSbooking/Dockerfile
