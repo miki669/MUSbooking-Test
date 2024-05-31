@@ -2,6 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MUSbooking", "MUSbooking\MUSbooking.csproj", "{1941D646-FFC8-4808-9DF5-B18B44975C7B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5D95759-5C53-4981-9727-C455EE269509}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.MUSBooking", "Test.MUSBooking\Test.MUSBooking.csproj", "{74707B5F-2BBC-4BA6-8353-3F2549A87047}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +19,9 @@ Global
 		{1941D646-FFC8-4808-9DF5-B18B44975C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1941D646-FFC8-4808-9DF5-B18B44975C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1941D646-FFC8-4808-9DF5-B18B44975C7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74707B5F-2BBC-4BA6-8353-3F2549A87047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74707B5F-2BBC-4BA6-8353-3F2549A87047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74707B5F-2BBC-4BA6-8353-3F2549A87047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74707B5F-2BBC-4BA6-8353-3F2549A87047}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,9 +1,8 @@
-namespace MUSbooking.Services;
+namespace MUSbooking.Exceptions;
 
 public class NotFoundException : Exception
 {
-    public NotFoundException(string s)
+    public NotFoundException(string message): base(message)
     {
-        throw new NotImplementedException();
     }
 }

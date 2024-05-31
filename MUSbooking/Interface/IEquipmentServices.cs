@@ -1,9 +1,10 @@
 using MUSbooking.Model;
+using MUSbooking.Model.Dto;
 
-namespace MUSbooking.Services;
+namespace MUSbooking.Interface;
 
 public interface IEquipmentServices
 {
-    Task<Equipment> CreateEquipmentAsync(Equipment equipment);
-    Task<Equipment> GetEquipmentAsync(int id);
+    Task<Equipment> CreateEquipmentAsync(EquipmentDto equipment);
+    Task<Equipment> GetEquipmentAsync(Guid id);
 }

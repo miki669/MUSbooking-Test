@@ -2,17 +2,16 @@ using Microsoft.EntityFrameworkCore;
 using MUSbooking.Context;
 using MUSbooking.Exceptions;
 using MUSbooking.Model;
+using MUSbooking.Model.Dto;
 using MUSbooking.Services;
 
-namespace Test.MUSBooking;
+namespace Test.MUSBooking.Tests;
 
-public class UnitTest1
+public class EquipmentServiceTests
 {
-    
     private readonly EquipmentServices _equipmentServices;
     private readonly PrimaryDataBaseContext _context;
-
-    public UnitTest1()
+    public EquipmentServiceTests()
     {
         var options = new DbContextOptionsBuilder<PrimaryDataBaseContext>()
             .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
@@ -35,6 +34,7 @@ public class UnitTest1
         Assert.Equal(equipment.Amount, result.Amount);
         Assert.Equal(equipment.Price, result.Price);
     }
+    
     [Fact]
     public async Task CreateEquipmentAsync_ShouldThrowException_WhenEquipmentAlreadyExists()
     {
@@ -77,6 +77,4 @@ public class UnitTest1
         var nonExistentId = Guid.NewGuid();
         await Assert.ThrowsAsync<NotFoundException>(() => _equipmentServices.GetEquipmentAsync(nonExistentId));
     }
-    
-    
 }

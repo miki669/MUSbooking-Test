@@ -1,6 +1,22 @@
-﻿services:
-  musbooking:
+﻿version: '3.8'
+
+services:
+  api:
     image: musbooking
     build:
       context: .
       dockerfile: MUSbooking/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+  tests:
+    build:
+      context: .
+      dockerfile: Test.MUSBooking/Dockerfile
+    depends_on:
+      - api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./testresults:/app/testresults

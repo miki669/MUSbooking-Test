@@ -11,4 +11,12 @@ public class ErrorDetails
     {
         return JsonConvert.SerializeObject(this);
     }
+}public class ValidationErrorDetails : ErrorDetails
+{
+    public IEnumerable<string> Errors { get; set; }
+
+    public override string ToString()
+    {
+        return JsonConvert.SerializeObject(this);
+    }
 }
